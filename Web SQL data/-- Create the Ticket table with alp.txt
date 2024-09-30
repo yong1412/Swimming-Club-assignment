@@ -1,0 +1,21 @@
+-- Create the Ticket table with alphanumeric ticket_id and foreign keys
+CREATE TABLE Ticket (
+    ticket_id VARCHAR(10) PRIMARY KEY,  -- Alphanumeric unique identifier
+    member_ic VARCHAR(20),  -- Foreign key referencing the Member's IC
+    event_id VARCHAR(10),  -- Foreign key referencing Society's event_id
+    FOREIGN KEY (member_ic) REFERENCES Member(ic),  -- Link to the Member table
+    FOREIGN KEY (event_id) REFERENCES Society(event_id)  -- Link to the Society table
+);
+
+-- Insert data into the Ticket table ensuring correct foreign key references
+INSERT INTO Ticket (ticket_id, member_ic, event_id) VALUES
+('TK001', '050309-08-0623', 'EV001'),  -- Alice Johnson to Night Swimming Party
+('TK002', '890623-01-1234', 'EV002'),  -- Bob Smith to Summer Swimming Bash
+('TK003', '051015-02-2234', 'EV003'),  -- Chris Wong to Glow-in-the-Dark Swim Party
+('TK004', '940909-10-3456', 'EV004'),  -- Diana Green to Rooftop Pool Party
+('TK005', '971020-11-7890', 'EV005'),  -- Edward White to Underwater Disco Party
+('TK006', '020125-03-1234', 'EV006'),  -- Fiona Black to Tropical Swim Party
+('TK007', '950510-04-5678', 'EV007'),  -- George Harris to Backyard Pool BBQ
+('TK008', '901130-05-4567', 'EV008'),  -- Hannah Scott to Infinity Pool Party
+('TK009', '980712-06-7890', 'EV009'),  -- Ian Blue to Sunset Beach Swim Party
+('TK010', '940403-07-1234', 'EV010');  -- Jessica Brown to Spring Splash Pool Party

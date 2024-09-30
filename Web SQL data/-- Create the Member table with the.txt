@@ -1,0 +1,24 @@
+-- Create the Member table with the required fields
+CREATE TABLE Member (
+    name VARCHAR(100),
+    gender CHAR(1),
+    age INT,
+    ic VARCHAR(20),  -- IC in YYMMDD-XX-XXXX format
+    phone VARCHAR(15),
+    birthdate VARCHAR(10),  -- Store dates in DD/MM/YYYY format as strings
+    email VARCHAR(100),
+    PRIMARY KEY (ic)
+);
+
+-- Insert data into the Member table with birthdates in DD/MM/YYYY format
+INSERT INTO Member (name, gender, age, ic, phone, birthdate, email) VALUES
+('Alice Johnson', 'F', 19, '050309-08-0623', '+60123456781', '09/03/2005', 'alice.j@example.com'),
+('Bob Smith', 'M', 35, '890623-01-1234', '+60123456782', '23/06/1989', 'bob.s@example.com'),
+('Chris Wong', 'M', 18, '051015-02-2234', '+60123456783', '15/10/2005', 'chris.w@example.com'),
+('Diana Green', 'F', 29, '940909-10-3456', '+60123456784', '09/09/1994', 'diana.g@example.com'),
+('Edward White', 'M', 27, '971020-11-7890', '+60123456785', '20/10/1997', 'edward.w@example.com'),
+('Fiona Black', 'F', 22, '020125-03-1234', '+60123456786', '25/01/2002', 'fiona.b@example.com'),
+('George Harris', 'M', 29, '950510-04-5678', '+60123456787', '10/05/1995', 'george.h@example.com'),
+('Hannah Scott', 'F', 34, '901130-05-4567', '+60123456788', '30/11/1990', 'hannah.s@example.com'),
+('Ian Blue', 'M', 26, '980712-06-7890', '+60123456789', '12/07/1998', 'ian.b@example.com'),
+('Jessica Brown', 'F', 30, '940403-07-1234', '+60123456790', '03/04/1994', 'jessica.b@example.com');

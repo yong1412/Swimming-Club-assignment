@@ -1,0 +1,24 @@
+-- Create the Society table with alphanumeric event_id
+CREATE TABLE Society (
+    event_id VARCHAR(10) PRIMARY KEY,  -- Use VARCHAR for alphanumeric identifiers
+    event_name VARCHAR(100),
+    event_date DATE,  -- Store event date as DATE
+    location VARCHAR(100),
+    start_time TIME,  -- Event starting time
+    end_time TIME,  -- Event ending time
+    fare DECIMAL(10, 2),  -- Cost to attend
+    tickets_available INT  -- Number of tickets available
+);
+
+-- Insert random data into the Society table with swimming party themes
+INSERT INTO Society (event_id, event_name, event_date, location, start_time, end_time, fare, tickets_available) VALUES
+('EV001', 'Night Swimming Party', '2023-11-25', 'Riverside Pool', '18:00', '23:00', 45.00, 500),
+('EV002', 'Summer Swimming Bash', '2023-12-10', 'Beach Resort', '10:00', '17:00', 55.00, 800),
+('EV003', 'Glow-in-the-Dark Swim Party', '2024-01-15', 'Community Pool', '19:00', '23:00', 50.00, 300),
+('EV004', 'Rooftop Pool Party', '2024-02-28', 'Skyline Hotel', '17:00', '21:00', 60.00, 200),
+('EV005', 'Underwater Disco Party', '2024-03-22', 'Aquatic Center', '20:00', '01:00', 70.00, 450),
+('EV006', 'Tropical Swim Party', '2024-04-10', 'Resort Pool', '13:00', '18:00', 65.00, 400),
+('EV007', 'Backyard Pool BBQ', '2024-05-01', 'Private Residence', '12:00', '16:00', 40.00, 150),
+('EV008', 'Infinity Pool Party', '2024-06-05', 'Luxury Condo', '16:00', '20:00', 80.00, 300),
+('EV009', 'Sunset Beach Swim Party', '2024-07-14', 'Coastal Beach', '18:00', '22:00', 75.00, 600),
+('EV010', 'Spring Splash Pool Party', '2024-08-18', 'Water Park', '11:00', '17:00', 35.00, 1000);

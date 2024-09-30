@@ -1,0 +1,26 @@
+-- Create the Staff table with birthdate in DD/MM/YYYY format
+CREATE TABLE Staff (
+    staff_id VARCHAR(20),  -- Unique identifier for each staff member
+    name VARCHAR(100),
+    position VARCHAR(50),  -- Job title or role
+    gender CHAR(1),
+    age INT,
+    ic VARCHAR(20),  -- Identification number
+    phone VARCHAR(15),
+    birthdate VARCHAR(10),  -- Store as a string to maintain DD/MM/YYYY format
+    email VARCHAR(100),
+    PRIMARY KEY (staff_id)  -- Use staff_id as the primary key
+);
+
+-- Insert 10 records with consistent information
+INSERT INTO Staff (staff_id, name, position, gender, age, ic, phone, birthdate, email) VALUES
+('STF001', 'John Doe', 'Manager', 'M', 42, '790315-10-2345', '+60123456701', '15/03/1979', 'john.d@example.com'),
+('STF002', 'Sarah Lee', 'Assistant Manager', 'F', 36, '850422-01-1234', '+60123456702', '22/04/1985', 'sarah.l@example.com'),
+('STF003', 'Michael Tan', 'Developer', 'M', 28, '930112-08-5678', '+60123456703', '12/01/1993', 'michael.t@example.com'),
+('STF004', 'Jessica Brown', 'Designer', 'F', 30, '940403-07-9876', '+60123456704', '03/04/1994', 'jessica.b@example.com'),
+('STF005', 'Karen White', 'Accountant', 'F', 34, '870515-02-1234', '+60123456705', '15/05/1987', 'karen.w@example.com'),
+('STF006', 'Thomas Green', 'Sales', 'M', 26, '980625-03-2345', '+60123456706', '25/06/1998', 'thomas.g@example.com'),
+('STF007', 'Emily Black', 'HR Executive', 'F', 32, '910809-04-5678', '+60123456707', '09/08/1991', 'emily.b@example.com'),
+('STF008', 'Charles Brown', 'Project Manager', 'M', 38, '850720-05-7890', '+60123456708', '20/07/1985', 'charles.b@example.com'),
+('STF009', 'Amanda Grey', 'Admin Assistant', 'F', 25, '980311-06-3456', '+60123456709', '11/03/1998', 'amanda.g@example.com'),
+('STF010', 'David White', 'IT Support', 'M', 29, '950711-07-6789', '+60123456710', '11/07/1995', 'david.w@example.com');
